@@ -1,0 +1,12 @@
+.validation {
+    color: red;
+
+    font-family: Inter;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: -24px;
+}
+
+.validation-error__link {
+    margin-top: 0;
+}

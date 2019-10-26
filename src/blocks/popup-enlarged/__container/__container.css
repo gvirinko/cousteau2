@@ -1,0 +1,11 @@
+.popup-enlarged__container {
+    /* max-width: 80vw; */
+    /* max-height: 80vh; */
+    width: calc(50% - 10px);
+    height: 80vh;
+    
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
