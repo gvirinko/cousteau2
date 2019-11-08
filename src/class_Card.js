@@ -1,6 +1,6 @@
+import {EnlargedPopup} from "./class_EnlargedPopup.js";
 
-
-class Card {
+export class Card {
     constructor(name, url, parent) {
         this.container = this.create(name, url);
         this.parent = parent;
