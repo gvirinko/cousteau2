@@ -1,3 +1,5 @@
+
+
 import {handleValidate, validateEditOnInput, validateCardOnInput} from './script-validation.js';
 import {Api} from './class_Api.js';
 import {EditPopup} from "./class_EditPopup.js";
