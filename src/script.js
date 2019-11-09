@@ -3,6 +3,8 @@
 import {handleValidate, validateEditOnInput, validateCardOnInput} from './script-validation.js';
 import {Api} from './class_Api.js';
 import {EditPopup} from "./class_EditPopup.js";
+// import {serverUrl} from "./index.js";
+
 
 
 // Константы
@@ -11,7 +13,9 @@ const userInfoButtonEdit = document.querySelector('.user-info__button_edit');
 
 export const token = '58156076-0fba-40e5-92f5-53ef93f74257';
 const cohortId = 'cohort3';
-const serverIP = 'http://95.216.175.5';
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
+
+// const serverIP = 'http://95.216.175.5';
 
 // Открытие формы редактирования профиля
 userInfoButtonEdit.addEventListener('click', function(event) {
@@ -33,7 +37,7 @@ function startValidationListeners() {
 
 startValidationListeners();
 
-export let api = new Api (serverIP, {authorization: token, 'Content-Type': 'application/json'}, cohortId);
+export let api = new Api (serverUrl, {authorization: token, 'Content-Type': 'application/json'}, cohortId);
 
 //1. Загрузка информации о пользователе с сервера
 api.loadProfile();

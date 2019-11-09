@@ -2,6 +2,9 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
+const webpack = require('webpack');
+
+
 
 module.exports = {
     entry: {
@@ -22,7 +25,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.(png|jpe?g|gif|ico|svg)$/i,
@@ -37,24 +40,10 @@ module.exports = {
                   }
                 ]
             },
-            // {
-            //     test: /\.svg$/,
-            //     loader: 'svg-inline-loader'
-            // },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=./fonts/[name].[ext]'
             }
-            // {
-            //     test: /\.(png|jp(e*)g|svg)$/,
-            //     use: [{
-            //         loader: 'url-loader',
-            //         options: {
-            //             limit: 8000, // Convert images < 8kb to base64 strings
-            //             name: 'images2/[hash]-[name].[ext]'
-            //         }
-            //     }]
-            // }
         ]
     },
     plugins: [
@@ -64,9 +53,14 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             inject: false,
-            // hash: true,
             template: './src/index.html',
             filename: 'index.html'
-          })
+        }),
+
+        new WebpackMd5Hash(),
+
+        new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        })
     ]
 };
