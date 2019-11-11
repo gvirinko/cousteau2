@@ -1,5 +1,6 @@
+// import {api} from "./script.js";
 
-class EditPopup {
+export class EditPopup {
     constructor(container) {
         this.container = container;
         this.closeButton = this.container.querySelector('.popup-edit__close');

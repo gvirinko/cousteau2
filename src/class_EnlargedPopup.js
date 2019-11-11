@@ -1,5 +1,5 @@
 
-class EnlargedPopup {
+export class EnlargedPopup {
     constructor(container, url) {
         this.container = container;
         this.url = url;
@@ -13,7 +13,7 @@ class EnlargedPopup {
     }
     open() {
         document.querySelector('.popup-enlarged__image').src = this.url;
-        this.container.classList.add('popup_is-opened'); 
+        this.container.classList.add('popup_is-opened');
     }
     close() {
         this.container.classList.remove('popup_is-opened');

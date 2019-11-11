@@ -1,5 +1,6 @@
+// import {CardList} from "./class_CardList";
 
-class CardPopup {
+export class CardPopup {
     constructor(container, cardList) {
         this.container = container;
         this.closeButton = this.container.querySelector('.popup-card__close');
@@ -18,7 +19,7 @@ class CardPopup {
 
     }
     open() {
-        this.container.classList.add('popup_is-opened'); 
+        this.container.classList.add('popup_is-opened');
         this.submitButton.disabled = true;
 
     }
