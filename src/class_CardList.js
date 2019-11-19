@@ -2,6 +2,7 @@
 import {Card} from "./class_Card.js";
 import {CardPopup} from "./class_CardPopup.js";
 
+
 export class CardList {
     constructor(parent, initialCards) {
         this.parent = parent;

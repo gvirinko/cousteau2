@@ -1,9 +1,10 @@
 // import {CardList} from "./class_CardList";
+import {resetAllValidationMessages} from './script-validation.js';
 
 export class CardPopup {
     constructor(container, cardList) {
         this.container = container;
-        this.closeButton = this.container.querySelector('.popup-card__close');
+        this.closeButton = this.container.querySelector('.popup-edit__close');
         this.submitButton = this.container.querySelector('.popup-card__button');
         this.form = this.container.querySelector('.popup-card__form');
         this.cardList = cardList;
@@ -25,7 +26,7 @@ export class CardPopup {
     }
     close() {
         this.container.classList.remove('popup_is-opened');
-        resetAllValidationMessages()
+        resetAllValidationMessages();
         this.form.reset();
     }
 

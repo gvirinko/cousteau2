@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/gvirinko/cousteau2/issues"
   },
-  "homepage": "https://github.com/gvirinko/cousteau2/",
+  "homepage": "https://gvirinko.github.io/cousteau2/",
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",

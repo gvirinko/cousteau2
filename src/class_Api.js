@@ -1,12 +1,10 @@
 import {CardList} from "./class_CardList";
 import {placesSection} from "./script.js";
-// import {token} from "./script.js";
-
 
 export class Api {
     constructor(baseUrl, headers, cohortId) {
       this.baseUrl = baseUrl;
-      this.headers = headers;
+      this.headers = {authorization: '8fadaf07-e3e6-4019-aca9-05f9a137f449', 'Content-Type': 'application/json'};
     //   this.authorization = token;
     //   this.token = token;
       this.cohortId = cohortId;

@@ -1,5 +1,6 @@
-// import {api} from "./script.js";
-
+import {api} from "./script.js";
+// import {Api} from './class_Api.js';
+import {resetAllValidationMessages} from './script-validation.js';
 export class EditPopup {
     constructor(container) {
         this.container = container;
