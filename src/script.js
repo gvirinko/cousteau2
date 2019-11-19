@@ -1,21 +1,16 @@
 
-
 import {handleValidate, validateEditOnInput, validateCardOnInput} from './script-validation.js';
 import {Api} from './class_Api.js';
 import {EditPopup} from "./class_EditPopup.js";
-// import {serverUrl} from "./index.js";
-
 
 
 // Константы
 export const placesSection = document.querySelector('.places-list');
 const userInfoButtonEdit = document.querySelector('.user-info__button_edit');
 
-export const token = '58156076-0fba-40e5-92f5-53ef93f74257';
-const cohortId = 'cohort3';
+export const token = '8fadaf07-e3e6-4019-aca9-05f9a137f449';
+const cohortId = 'cohort4';
 const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
-
-// const serverIP = 'http://95.216.175.5';
 
 // Открытие формы редактирования профиля
 userInfoButtonEdit.addEventListener('click', function(event) {
@@ -37,9 +32,9 @@ function startValidationListeners() {
 
 startValidationListeners();
 
-export let api = new Api (serverUrl, {authorization: token, 'Content-Type': 'application/json'}, cohortId);
+export let api = new Api (serverUrl, {authorization: token, 'Content-Type': 'application/json', 'Cache-Control': 'no-cache'}, cohortId);
 
-//1. Загрузка информации о пользователе с сервера
+// 1. Загрузка информации о пользователе с сервера
 api.loadProfile();
 
 // 2. Загрузка первоначальных карточек с сервера

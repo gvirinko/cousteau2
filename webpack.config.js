@@ -36,7 +36,7 @@ module.exports = {
             {
                 test: /\.(png|jpe?g|gif|ico|svg)$/i,
                 use: [
-                  'file-loader?name=./images2/[name].[ext]',
+                  'file-loader?name=./images/[name].[ext]',
                   {
                     loader: 'image-webpack-loader',
                     options: {
@@ -55,10 +55,6 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
-        }),
-
-        new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
         }),
 
         new OptimizeCssAssetsPlugin({
