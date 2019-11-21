@@ -66,8 +66,8 @@ export class Card {
 
       // Добавление контента карточки
       cardName.textContent = name;
-    //   cardImage.style.backgroundImage = `url(${url})`;
-    cardImage.style.backgroundImage = "url('./images/avatar.jpg')";
+      cardImage.style.backgroundImage = `url(${url})`;
+
       return cardContainer;
     }
 }
