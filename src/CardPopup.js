@@ -1,4 +1,3 @@
-// import {CardList} from "./class_CardList";
 import {resetAllValidationMessages} from './script-validation.js';
 
 export class CardPopup {
