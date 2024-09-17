@@ -1,5 +1,6 @@
-
-class EditPopup {
+import {api} from "./script.js";
+import {resetAllValidationMessages} from './script-validation.js';
+export class EditPopup {
     constructor(container) {
         this.container = container;
         this.closeButton = this.container.querySelector('.popup-edit__close');
