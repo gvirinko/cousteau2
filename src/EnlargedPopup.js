@@ -1,6 +1,3 @@
-// import {resetAllValidationMessages} from './script-validation.js';
-// import {Card} from './class_Card.js';
-
 export class EnlargedPopup {
     constructor(container, url) {
         this.container = container;

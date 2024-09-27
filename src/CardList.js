@@ -1,6 +1,5 @@
-// import {placesSection} from "./script.js";
-import {Card} from "./class_Card.js";
-import {CardPopup} from "./class_CardPopup.js";
+import {Card} from "./Card.js";
+import {CardPopup} from "./CardPopup.js";
 
 
 export class CardList {

@@ -1,7 +1,7 @@
 
 import {handleValidate, validateEditOnInput, validateCardOnInput} from './script-validation.js';
-import {Api} from './class_Api.js';
-import {EditPopup} from "./class_EditPopup.js";
+import {Api} from './Api.js';
+import {EditPopup} from "./EditPopup.js";
 
 
 // Константы

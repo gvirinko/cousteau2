@@ -1,4 +1,4 @@
-import {CardList} from "./class_CardList";
+import {CardList} from "./CardList.js";
 import {placesSection} from "./script.js";
 
 export class Api {

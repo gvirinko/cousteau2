@@ -1,4 +1,4 @@
-import {EnlargedPopup} from "./class_EnlargedPopup.js";
+import {EnlargedPopup} from "./EnlargedPopup.js";
 
 
 export class Card {
